@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 
 import '../../../../constants.dart';
 import '../../model/prouduct.dart';
+import '../../screens/qr.dart';
 
 class AddToCart extends StatelessWidget {
   const AddToCart({
@@ -39,7 +40,12 @@ class AddToCart extends StatelessWidget {
             child: SizedBox(
               height: 58,
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => QRViewExample()),
+                  );
+                },
                 child: Text(
                   'buy now'.toUpperCase(),
                   style: TextStyle(
