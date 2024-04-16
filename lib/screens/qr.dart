@@ -32,6 +32,21 @@ class _QRViewExampleState extends State<QRViewExample> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Text(
+              'قم بتوجيه الكاميرا نحو الرمز المربع لبدء إدارة حاله التوصيل ',
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ),
+          SizedBox(
+            height: 20,
+          ),
           Container(
             width: MediaQuery.of(context).size.width *
                 0.8, // Adjust the width as needed
@@ -41,15 +56,30 @@ class _QRViewExampleState extends State<QRViewExample> {
               onQRViewCreated: _onQRViewCreated,
             ),
           ),
-          SizedBox(height: 20), // Spacer
+          SizedBox(height: 40), // Spacer
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               for (int i = 0; i < 4; i++)
-                Icon(iconStates[i] ? Icons.check : Icons.close,
-                    color: iconStates[i] ? Colors.green : Colors.red),
+                Container(
+                  width: 50, // Set the width of the circle
+                  height: 50, // Set the height of the circle
+                  decoration: BoxDecoration(
+                    color: iconStates[i]
+                        ? Colors.green
+                        : Colors.red, // Green if true, red if false
+                    shape: BoxShape.circle, // Makes the container circular
+                  ),
+                  child: Icon(
+                    iconStates[i] ? Icons.check : Icons.close,
+                    color: Colors.white, // Icon color is white
+                  ),
+                  alignment:
+                      Alignment.center, // Center the icon within the container
+                ),
             ],
           ),
+
           SizedBox(height: 20), // Spacer
           Text(
             textToShow,
@@ -62,7 +92,7 @@ class _QRViewExampleState extends State<QRViewExample> {
               onPressed: () {
                 _toggleButtonState();
               },
-              child: Text('Scan QR'),
+              child: Text('اضغط هنا'),
             ),
           ),
         ],
