@@ -1,6 +1,5 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:flutter/foundation.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 
 class QRViewExample extends StatefulWidget {
@@ -28,12 +27,12 @@ class _QRViewExampleState extends State<QRViewExample> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('QR Scanner Example')),
+      appBar: AppBar(title: const Text('QR Scanner Example')),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.all(10.0),
+          const Padding(
+            padding: EdgeInsets.all(10.0),
             child: Text(
               'قم بتوجيه الكاميرا نحو الرمز المربع لبدء إدارة حاله التوصيل ',
               style: TextStyle(
@@ -44,7 +43,7 @@ class _QRViewExampleState extends State<QRViewExample> {
               textAlign: TextAlign.center,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Container(
@@ -56,7 +55,7 @@ class _QRViewExampleState extends State<QRViewExample> {
               onQRViewCreated: _onQRViewCreated,
             ),
           ),
-          SizedBox(height: 40), // Spacer
+          const SizedBox(height: 40), // Spacer
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -80,19 +79,19 @@ class _QRViewExampleState extends State<QRViewExample> {
             ],
           ),
 
-          SizedBox(height: 20), // Spacer
+          const SizedBox(height: 20), // Spacer
           Text(
             textToShow,
-            style: TextStyle(fontSize: 18),
+            style: const TextStyle(fontSize: 18),
           ), // Display dynamic text
-          SizedBox(height: 20), // Spacer
+          const SizedBox(height: 20), // Spacer
           Visibility(
             visible: _hasScanned, // Show button only when scanned
             child: ElevatedButton(
               onPressed: () {
                 _toggleButtonState();
               },
-              child: Text('اضغط هنا'),
+              child: const Text('اضغط هنا'),
             ),
           ),
         ],
