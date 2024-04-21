@@ -217,7 +217,7 @@ class ItemFilter2 extends StatelessWidget {
         const SizedBox(height: 25),
           ItemContainer(
           name:  'القسم الرجالي',
-          imagePath: 'assets/images/images.jpg',
+          imagePath: 'assets/images/download (1).jpg',
           onTap: () {
             // Pass 1 and the selectedValues to the next page
             Get.to(const ClothMenHome(),

@@ -148,7 +148,7 @@ List<Product> jacket = [
       title: "جاكيت 1",
       price: 234,
       size: 12,
-      description: dummyText,
+      description: jackettext,
       image:
           "assets/images/jacket/jacket-removebg-preview.png",
       color: Color.fromARGB(255, 45, 47, 48)),
@@ -158,7 +158,7 @@ List<Product> jacket = [
       title: "جاكيت 2",
       price: 234,
       size: 12,
-      description: dummyText,
+      description: jackettext,
       image: "assets/images/jacket/jacket2-removebg-preview.png",
       color: Color.fromARGB(255, 200, 200, 218)),
  
@@ -170,7 +170,7 @@ List<Product> shirt = [
       title: "قميص 1",
       price: 234,
       size: 12,
-      description: dummyText,
+      description: jackettext,
       image:
           "assets/images/jacket/shirt1-removebg-preview.png",
       color: Color.fromARGB(255, 128, 203, 247)),
@@ -180,7 +180,7 @@ List<Product> shirt = [
       title: "قميص 2",
       price: 234,
       size: 12,
-      description: dummyText,
+      description: jackettext,
       image: "assets/images/jacket/shirt2-removebg-preview.png",
       color: Color.fromARGB(255, 94, 96, 185)),
  
@@ -188,3 +188,4 @@ List<Product> shirt = [
 
 String dummyText =
     "حقيبة عملية وأنيقة تجمع بين الأناقة والوظائف المتعددة، مثالية للإستخدام اليومي والسفر. تصميم فريد يجمع بين الجودة والأناقة، مع مساحات تخزين متعددة تلبي احتياجاتك اليومية بكل سهولة وراحة";
+String jackettext = "الجاكيت للرجال قطعة أساسية في الملابس الرجالية، يضفي لمسة أنيقة على الإطلالة ,يمكن ارتداء الجاكيت في مختلف المناسبات والأوقات، سواء في العمل أو في الأنشطة اليومية  تتوفر الجاكيتات بأشكال وتصاميم متعددة، مما يسمح بتنسيقها بسهولة مع مختلف الأزياء";
