@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:medoproject/screens/pc/laptop.dart';
 
-import 'dress.dart';
-import 'hand_bag.dart';
+import 'ex.dart';
 
-class ClothHome extends StatelessWidget {
-  const ClothHome({Key? key});
+
+
+class PcHome extends StatelessWidget {
+  const PcHome({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,20 +17,21 @@ class ClothHome extends StatelessWidget {
           length: 2, // Number of tabs
           child: Scaffold(
             appBar: AppBar(
-              title: Center(child: const Text('القسم النسائي')),
+              title: Center(child: const Text('قسم الحاسبات')),
               bottom: const TabBar(
                 tabs: [
-                  Tab(text: 'حقيبة يد'), // First tab
-                  Tab(text: 'فساتين'), // Second tab
+               
+                  Tab(text: 'ايكسسوارات'), // Second tab
+                     Tab(text: 'لابتوبات'), // First tab
                 ],
               ),
             ),
             body: TabBarView(
               children: [
                 // First tab content
-                HandbagsPage(), // Navigate to HandbagsPage
+                ExPage(), // Navigate to HandbagsPage
                 // Second tab content
-                DressesPage(), // Navigate to DressesPage
+                LaaptopPAge(), // Navigate to DressesPage
               ],
             ),
           ),

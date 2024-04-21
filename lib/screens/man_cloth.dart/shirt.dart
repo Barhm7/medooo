@@ -3,7 +3,7 @@ import '../../constants.dart';
 import '../../details/details_screen.dart';
 import '../../model/prouduct.dart';
 
-class DressesPage extends StatelessWidget {
+class ShirtPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -13,7 +13,7 @@ class DressesPage extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
             child: GridView.builder(
-              itemCount: dress.length,
+              itemCount: shirt.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 childAspectRatio: 0.75,
@@ -21,10 +21,10 @@ class DressesPage extends StatelessWidget {
                 crossAxisSpacing: kDefaultPadding,
               ),
               itemBuilder: (context, index) => ItemCard(
-                product: dress[index],
+                product: shirt[index],
                 press: () => Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => DetailsScreen(
-                    product: dress[index],
+                    product: shirt[index],
                   ),
                 )),
               ),

@@ -3,7 +3,7 @@ import 'package:flutter_svg/svg.dart';
 
 import '../../../../constants.dart';
 import '../../model/prouduct.dart';
-import '../../screens/qr.dart';
+import '../../qr.dart';
 
 class AddToCart extends StatelessWidget {
   const AddToCart({
@@ -19,23 +19,7 @@ class AddToCart extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: kDefaultPadding),
       child: Row(
         children: [
-          // Container(
-          //   margin:
-          //   const EdgeInsets.only(right: kDefaultPadding),
-          //   height: 58.0,
-          //   width: 58.0,
-          //   decoration: BoxDecoration(
-          //     border: Border.all(color: product!.color!),
-          //     borderRadius: BorderRadius.circular(18.0),
-          //   ),
-          //   // child: IconButton(
-          //   //   onPressed: () {},
-          //   //   icon: SvgPicture.asset(
-          //   //     'assets/icons/add_to_cart.svg',
-          //   //     color: product!.color!,
-          //   //   ),
-          //   // ),
-          // ),
+     
           Expanded(
             child: SizedBox(
               height: 58,
@@ -46,19 +30,19 @@ class AddToCart extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => QRViewExample()),
                   );
                 },
-                child: Text(
-                  'buy now'.toUpperCase(),
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                    fontSize: 17,
-                  ),
-                ),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateColor.resolveWith(
                       (states) => product!.color!),
                   shape: MaterialStateProperty.all(RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(18.0))),
+                ),
+                child: Text(
+                  'شراء الان'.toUpperCase(),
+                  style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                    fontSize: 17,
+                  ),
                 ),
               ),
             ),

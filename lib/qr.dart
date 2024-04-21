@@ -27,7 +27,6 @@ class _QRViewExampleState extends State<QRViewExample> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('QR Scanner Example')),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
@@ -46,7 +45,7 @@ class _QRViewExampleState extends State<QRViewExample> {
           const SizedBox(
             height: 20,
           ),
-          Container(
+          SizedBox(
             width: MediaQuery.of(context).size.width *
                 0.8, // Adjust the width as needed
             height: MediaQuery.of(context).size.width * 0.8, // Make it square
@@ -69,12 +68,12 @@ class _QRViewExampleState extends State<QRViewExample> {
                         : Colors.red, // Green if true, red if false
                     shape: BoxShape.circle, // Makes the container circular
                   ),
+                  alignment:
+                      Alignment.center,
                   child: Icon(
                     iconStates[i] ? Icons.check : Icons.close,
                     color: Colors.white, // Icon color is white
-                  ),
-                  alignment:
-                      Alignment.center, // Center the icon within the container
+                  ), // Center the icon within the container
                 ),
             ],
           ),
@@ -88,11 +87,26 @@ class _QRViewExampleState extends State<QRViewExample> {
           Visibility(
             visible: _hasScanned, // Show button only when scanned
             child: ElevatedButton(
-              onPressed: () {
-                _toggleButtonState();
-              },
-              child: const Text('اضغط هنا'),
-            ),
+  onPressed: () {
+    _toggleButtonState();
+  },
+  style: ElevatedButton.styleFrom(
+    foregroundColor: Colors.white, backgroundColor: Colors.green, // White text color
+    padding: const EdgeInsets.all(16), // Padding around the text
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(10), // Rounded border
+    ),
+  ),
+  child: const Text(
+    'اضغط هنا',
+    style: TextStyle(
+       fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                    fontSize: 17,// Adjust font size as needed
+    ),
+  ),
+),
+
           ),
         ],
       ),

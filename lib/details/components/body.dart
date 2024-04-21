@@ -39,7 +39,7 @@ class Body extends StatelessWidget {
                 ),
                 child: Column(
                   children: [
-                    ColorAndSize(product: product),
+                    // ColorAndSize(product: product),
                     SizedBox(height: kDefaultPadding / 2),
                     Description(product: product),
                     SizedBox(height: kDefaultPadding / 2),

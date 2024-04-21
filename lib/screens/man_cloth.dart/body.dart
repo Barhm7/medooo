@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:medoproject/screens/man_cloth.dart/shirt.dart';
 
-import 'dress.dart';
-import 'hand_bag.dart';
+import 'jacket.dart';
 
-class ClothHome extends StatelessWidget {
-  const ClothHome({Key? key});
+
+
+class ClothMenHome extends StatelessWidget {
+  const ClothMenHome({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,20 +17,20 @@ class ClothHome extends StatelessWidget {
           length: 2, // Number of tabs
           child: Scaffold(
             appBar: AppBar(
-              title: Center(child: const Text('القسم النسائي')),
+              title: Center(child: const Text('القسم الرجالي')),
               bottom: const TabBar(
                 tabs: [
-                  Tab(text: 'حقيبة يد'), // First tab
-                  Tab(text: 'فساتين'), // Second tab
+                  Tab(text: 'جاكيتات'), // First tab
+                  Tab(text: 'قمصان'), // Second tab
                 ],
               ),
             ),
             body: TabBarView(
               children: [
                 // First tab content
-                HandbagsPage(), // Navigate to HandbagsPage
+                JacketPage(), // Navigate to HandbagsPage
                 // Second tab content
-                DressesPage(), // Navigate to DressesPage
+                ShirtPage(), // Navigate to DressesPage
               ],
             ),
           ),
