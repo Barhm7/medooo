@@ -40,6 +40,7 @@ dependencies:
   flutter_svg: ^2.0.10+1
   get: ^4.6.6
   google_fonts: ^6.2.1
+  awesome_dialog: ^3.2.0
 
 dev_dependencies:
   flutter_test:
@@ -67,6 +68,8 @@ flutter:
     - assets/images/dress/
     - assets/images/pc/
     - assets/images/jacket/
+    - assets/images/watch/
+    - assets/images/home/
     - assets/icons/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

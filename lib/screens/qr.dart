@@ -1,6 +1,9 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
+import 'package:awesome_dialog/awesome_dialog.dart';
+
+import 'home.dart';
 
 class QRViewExample extends StatefulWidget {
   @override
@@ -68,8 +71,7 @@ class _QRViewExampleState extends State<QRViewExample> {
                         : Colors.red, // Green if true, red if false
                     shape: BoxShape.circle, // Makes the container circular
                   ),
-                  alignment:
-                      Alignment.center,
+                  alignment: Alignment.center,
                   child: Icon(
                     iconStates[i] ? Icons.check : Icons.close,
                     color: Colors.white, // Icon color is white
@@ -87,26 +89,26 @@ class _QRViewExampleState extends State<QRViewExample> {
           Visibility(
             visible: _hasScanned, // Show button only when scanned
             child: ElevatedButton(
-  onPressed: () {
-    _toggleButtonState();
-  },
-  style: ElevatedButton.styleFrom(
-    foregroundColor: Colors.white, backgroundColor: Colors.green, // White text color
-    padding: const EdgeInsets.all(16), // Padding around the text
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(10), // Rounded border
-    ),
-  ),
-  child: const Text(
-    'اضغط هنا',
-    style: TextStyle(
-       fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                    fontSize: 17,// Adjust font size as needed
-    ),
-  ),
-),
-
+              onPressed: () {
+                _toggleButtonState();
+              },
+              style: ElevatedButton.styleFrom(
+                foregroundColor: Colors.white,
+                backgroundColor: Colors.green, // White text color
+                padding: const EdgeInsets.all(16), // Padding around the text
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10), // Rounded border
+                ),
+              ),
+              child: const Text(
+                'اضغط هنا',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  fontSize: 17, // Adjust font size as needed
+                ),
+              ),
+            ),
           ),
         ],
       ),
@@ -137,10 +139,35 @@ class _QRViewExampleState extends State<QRViewExample> {
           iconStates[i] =
               true; // Update icon state to green for the first non-green icon
           _updateText(i); // Update text based on the icon index
+          if (i == 3) {
+            // Show the awesome dialog when the last text appears
+            _showAwesomeDialog();
+          }
           break;
         }
       }
     });
+  }
+
+  void _showAwesomeDialog() {
+    AwesomeDialog(
+      context: context,
+      dialogType: DialogType.success, // Dialog type: SUCCESS
+      animType: AnimType.bottomSlide, // Animation type
+      title: 'تم وصول الطلب بنجاح', // Dialog title
+      desc: '', // Dialog description (empty in this case)
+      btnOkText: 'اضغط هنا للعودة', // Change the button text
+      btnOkOnPress: () {
+        // Navigate to the home page when OK button is pressed
+        Navigator.pushAndRemoveUntil(
+          context,
+          MaterialPageRoute(
+              builder: (context) =>
+                  HomeScreen()), // Replace HomePage with your actual home page widget
+          (Route<dynamic> route) => false, // Clear all routes on navigation
+        );
+      },
+    ).show(); // Show the dialog
   }
 
   void _updateText(int iconIndex) {

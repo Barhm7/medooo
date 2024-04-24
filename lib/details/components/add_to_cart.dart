@@ -3,7 +3,7 @@ import 'package:flutter_svg/svg.dart';
 
 import '../../../../constants.dart';
 import '../../model/prouduct.dart';
-import '../../qr.dart';
+import '../../screens/qr.dart';
 
 class AddToCart extends StatelessWidget {
   const AddToCart({
@@ -19,7 +19,6 @@ class AddToCart extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: kDefaultPadding),
       child: Row(
         children: [
-     
           Expanded(
             child: SizedBox(
               height: 58,
