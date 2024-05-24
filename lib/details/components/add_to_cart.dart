@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import '../../../../constants.dart';
 import '../../model/prouduct.dart';
 import '../../screens/qr.dart';
+import '../../screens/takeinfo.dart';
 
 class AddToCart extends StatelessWidget {
   const AddToCart({
@@ -26,7 +27,7 @@ class AddToCart extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => QRViewExample()),
+                    MaterialPageRoute(builder: (context) => InformationPage()),
                   );
                 },
                 style: ButtonStyle(
@@ -36,7 +37,7 @@ class AddToCart extends StatelessWidget {
                       borderRadius: BorderRadius.circular(18.0))),
                 ),
                 child: Text(
-                  'شراء الان'.toUpperCase(),
+                  'متابعه'.toUpperCase(),
                   style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
