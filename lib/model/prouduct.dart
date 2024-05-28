@@ -34,7 +34,7 @@ List<Product> hand = [
   Product(
       id: 2,
       title: "satchel",
-      price: 234,
+      price: 134,
       size: 8,
       description: dummyText,
       image: "assets/images/bag_2.png",
@@ -42,7 +42,7 @@ List<Product> hand = [
   Product(
       id: 3,
       title: " Kate Spade",
-      price: 234,
+      price: 154,
       size: 10,
       description: dummyText,
       image: "assets/images/bag_3.png",
@@ -50,7 +50,7 @@ List<Product> hand = [
   Product(
       id: 4,
       title: "Fendi",
-      price: 234,
+      price: 126,
       size: 11,
       description: dummyText,
       image: "assets/images/bag_4.png",
@@ -58,7 +58,7 @@ List<Product> hand = [
   Product(
       id: 5,
       title: "Chanel",
-      price: 234,
+      price: 135,
       size: 12,
       description: dummyText,
       image: "assets/images/bag_5.png",
@@ -66,7 +66,7 @@ List<Product> hand = [
   Product(
     id: 6,
     title: "satchel",
-    price: 234,
+    price: 134,
     size: 12,
     description: dummyText,
     image: "assets/images/bag_6.png",
@@ -78,7 +78,7 @@ List<Product> dress = [
   Product(
       id: 1,
       title: "فستان 1",
-      price: 234,
+      price: 244,
       size: 12,
       description: clothh,
       image: "assets/images/dress/2024-04-24_17.27.30-removebg-preview.png",
@@ -86,7 +86,7 @@ List<Product> dress = [
   Product(
       id: 5,
       title: "فستان 5",
-      price: 234,
+      price: 276,
       size: 12,
       description: clothh,
       image: "assets/images/dress/images-removebg-preview.png",
@@ -97,7 +97,7 @@ List<Product> ex = [
   Product(
       id: 1,
       title: "ماوس ",
-      price: 234,
+      price: 13,
       size: 12,
       description: mouseText,
       image: "assets/images/pc/mouse-removebg-preview.png",
@@ -105,7 +105,7 @@ List<Product> ex = [
   Product(
       id: 5,
       title: "كيبورد ",
-      price: 234,
+      price: 23,
       size: 12,
       description: mouseText,
       image: "assets/images/pc/download-removebg-preview (2).png",
@@ -116,7 +116,7 @@ List<Product> laptop = [
   Product(
       id: 1,
       title: "dell",
-      price: 234,
+      price: 550,
       size: 12,
       description: laptopptext,
       image: "assets/images/pc/dell-removebg-preview.png",
@@ -124,7 +124,7 @@ List<Product> laptop = [
   Product(
       id: 5,
       title: "hp",
-      price: 234,
+      price: 670,
       size: 12,
       description: laptopptext,
       image: "assets/images/pc/download-removebg-preview.png",
@@ -135,7 +135,7 @@ List<Product> jacket = [
   Product(
       id: 1,
       title: "جاكيت 1",
-      price: 234,
+      price: 110,
       size: 12,
       description: jackettext,
       image: "assets/images/jacket/jacket-removebg-preview.png",
@@ -143,7 +143,7 @@ List<Product> jacket = [
   Product(
       id: 5,
       title: "جاكيت 2",
-      price: 234,
+      price: 90,
       size: 12,
       description: jackettext,
       image: "assets/images/jacket/jacket2-removebg-preview.png",
@@ -154,7 +154,7 @@ List<Product> shirt = [
   Product(
       id: 1,
       title: "قميص 1",
-      price: 234,
+      price: 27,
       size: 12,
       description: jackettext,
       image: "assets/images/jacket/shirt1-removebg-preview.png",
@@ -162,7 +162,7 @@ List<Product> shirt = [
   Product(
       id: 5,
       title: "قميص 2",
-      price: 234,
+      price: 44,
       size: 12,
       description: jackettext,
       image: "assets/images/jacket/shirt2-removebg-preview.png",
